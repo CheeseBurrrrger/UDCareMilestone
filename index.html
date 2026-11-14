@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UDCare · Rencana Implementasi Enam Bulan</title>
+<meta name="description" content="Enam milestone dalam 26 minggu: deliverable, checkpoint, termin, dan batasan proyek UDCare.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b1f3a;--navy2:#132c52;--ink:#1a2333;--ink2:#465163;--mute:#6b7586;--line:#d9dee6;--paper:#f5f6f9;--white:#fdfdfc;--blue:#1f48c8;--sky:#e8eefc;--slate:#3d4a5c;--red:#c8202f;--ok:#1b7a47;--amber:#9a6400}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--white)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.cond{font-family:"Barlow Condensed","Arial Narrow",Impact,sans-serif;font-weight:700;letter-spacing:-.005em}
+.serif{font-family:"Source Serif 4",Georgia,serif}
+p{margin:0}
+/* hero */
+.hero{background:var(--navy);color:#eef2f9;padding:72px 0 64px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7fa0ff}
+.hero h1{font-size:clamp(52px,8vw,104px);line-height:.95;margin:14px 0 20px;color:#fff}
+.hero .sub{font-size:clamp(19px,2.2vw,26px);line-height:1.3;color:#cfd8ea;max-width:760px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;border-top:1px solid #2c4268}
+.facts div{padding:20px 20px 0 0;min-width:0}
+.facts b{display:block;font-size:clamp(30px,4vw,44px);line-height:1;color:#fff}
+.facts span{font-size:14px;color:#aeb9cc}
+/* sections */
+section{padding:64px 0}
+section.alt{background:var(--paper)}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+h2{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:clamp(26px,3.2vw,38px);line-height:1.18;color:var(--navy);margin:0 0 12px;max-width:900px}
+.lead{color:var(--ink2);max-width:760px;margin-bottom:28px}
+/* timeline */
+.tools{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;margin-bottom:22px;font-size:14px;color:var(--ink2)}
+.tools input{font:inherit;padding:7px 10px;border:1px solid var(--line);background:#fff;color:var(--ink)}
+.months{display:flex;margin-left:0;font-size:12px;font-weight:700;color:var(--mute);letter-spacing:.08em;text-transform:uppercase}
+.months span{padding:0 0 8px 2px;border-left:1px solid var(--line)}
+.track{display:flex;gap:4px;position:relative}
+.seg{position:relative;border:0;font:inherit;text-align:left;cursor:pointer;background:#c9d2e3;color:var(--navy);padding:16px 16px 18px;min-height:132px;display:flex;flex-direction:column;gap:4px;transition:background .18s,color .18s,transform .18s;min-width:0}
+.seg:hover,.seg:focus-visible{background:#aebbd6;outline:none}
+.seg.on{background:var(--navy);color:#fff;transform:translateY(-6px)}
+.seg .id{font-size:34px;line-height:1}
+.seg .nm{font-size:14px;font-weight:600;line-height:1.25}
+.seg .blk{margin-top:auto;font-size:12px;font-weight:600;opacity:.8;white-space:nowrap}
+.cp{position:absolute;right:-15px;bottom:-13px;width:22px;height:22px;background:var(--red);transform:rotate(45deg);z-index:2;border:3px solid var(--white)}
+.alt .cp{border-color:var(--paper)}
+.seg.on .cp{background:var(--blue)}
+.ticks{display:flex;margin-top:22px;border-top:2px solid var(--navy)}
+.ticks span{flex:1;font-size:10px;color:var(--mute);text-align:center;padding-top:5px;border-left:1px solid var(--line)}
+.ticks span.c{color:var(--red);font-weight:700}
+.payrow{display:flex;gap:4px;margin-top:8px}
+.payrow span{font-size:12px;font-weight:700;color:var(--red);text-align:right;white-space:nowrap}
+.hint{font-size:13px;color:var(--mute);margin-top:14px}
+/* detail */
+.detail{margin-top:28px;background:#fff;border:1px solid var(--line);border-top:5px solid var(--navy);display:grid;grid-template-columns:1fr 330px}
+.dmain{padding:30px 34px}
+.dhead{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;margin-bottom:6px}
+.dhead .cond{font-size:52px;line-height:1;color:var(--blue)}
+.dhead h3{line-height:1.2;font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:26px;margin:0;color:var(--navy)}
+.four{display:grid;grid-template-columns:1fr 1fr;gap:22px 34px;margin-top:22px}
+.four h4{margin:0 0 6px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.four p,.four li{font-size:15px;color:var(--ink2)}
+.four ul{margin:0;padding-left:18px}
+.four li{margin-bottom:4px}
+.dside{background:var(--slate);color:#f3f5f8;padding:30px 28px;display:flex;flex-direction:column;gap:14px}
+.dside .lab{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#c9d3e2}
+.dside .big{font-size:64px;line-height:.9;color:#fff}
+.dside p{font-size:15px}
+.meter{height:8px;background:#5b6779}
+.meter i{display:block;height:100%;background:#fff;transition:width .3s}
+/* cards */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.step{border-top:5px solid var(--navy);padding-top:14px}
+.step .cond{font-size:44px;line-height:1;color:var(--blue)}
+.step h3{margin:6px 0 4px;font-size:17px;color:var(--navy)}
+.step p{font-size:15px;color:var(--ink2)}
+.note{margin-top:26px;background:var(--sky);padding:16px 20px;font-size:15px;color:var(--navy)}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.cols h3{margin:0 0 12px;padding-bottom:8px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;border-bottom:3px solid var(--navy);color:var(--navy)}
+.cols .r h3{border-color:var(--red);color:var(--red)}
+.cols .a h3{border-color:var(--amber);color:var(--amber)}
+.cols ul{margin:0;padding-left:18px}
+.cols li{margin-bottom:8px;color:var(--ink2);font-size:15px}
+.guards{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.guard{padding:0 30px;border-left:1px solid var(--line)}
+.guard:first-child{padding-left:0;border-left:0}
+.guard .cond{font-size:64px;line-height:.95;color:var(--blue)}
+.guard h3{margin:6px 0;font-size:17px;color:var(--navy)}
+.guard p{font-size:15px;color:var(--ink2)}
+/* ask */
+.ask{background:var(--navy);color:#fff}
+.ask h2{color:#fff}
+.ask ol{list-style:none;margin:24px 0 0;padding:0;counter-reset:a}
+.ask li{counter-increment:a;display:flex;gap:26px;align-items:baseline;padding:16px 0;border-top:1px solid #2c4268;font-size:19px}
+.ask li::before{content:counter(a);font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:700;font-size:44px;line-height:.9;color:#7fa0ff;width:30px;flex:none}
+.ask small{display:block;font-size:14px;color:#aeb9cc}
+footer{padding:22px 0 40px;font-size:13px;color:var(--mute)}
+@media (max-width:860px){
+  .facts{grid-template-columns:1fr 1fr}
+  .months,.ticks,.payrow{display:none}
+  .track{flex-direction:column;gap:6px}
+  .seg{flex:none!important;min-height:0;flex-direction:row;align-items:center;gap:14px;padding:14px 16px}
+  .seg.on{transform:none}
+  .seg .blk{margin:0 0 0 auto}
+  .cp{right:14px;bottom:-12px;width:16px;height:16px}
+  .detail,.four,.steps,.cols,.guards{grid-template-columns:1fr}
+  .guard{padding:18px 0;border-left:0;border-top:1px solid var(--line)}
+  .guard:first-child{border-top:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <p class="eyebrow">Astra UD Trucks · UDSO · Magang berbasis proyek</p>
+  <h1 class="cond">UDCare<br>Rencana Implementasi Enam Bulan</h1>
+  <p class="serif sub">Enam milestone dalam 26 minggu. Setiap milestone punya deliverable, checkpoint, dan batas yang tertulis.</p>
+  <div class="facts">
+    <div><b class="cond">26 minggu</b><span>batas waktu proyek</span></div>
+    <div><b class="cond">6 milestone</b><span>satu modul per milestone</span></div>
+    <div><b class="cond">6 checkpoint</b><span>demo, UAT, dan Berita Acara</span></div>
+    <div><b class="cond">Rp 150 jt</b><span>dibayar per milestone</span></div>
+  </div>
+</div></header>
+
+<section id="timeline"><div class="wrap">
+  <p class="kicker">Milestone</p>
+  <h2>Setiap blok waktu berakhir di satu checkpoint; pekerjaan berikutnya baru dimulai setelah checkpoint itu lulus</h2>
+  <p class="lead">Arahkan kursor atau klik sebuah blok untuk melihat apa yang diserahkan, cara memeriksanya, dan batasnya.</p>
+  <div class="tools">
+    <label>Tanggal kickoff <input type="date" id="start"></label>
+    <span id="endnote"></span>
+  </div>
+  <div class="months" id="months"></div>
+  <div class="track" id="track"></div>
+  <div class="ticks" id="ticks"></div>
+  <div class="payrow" id="payrow"></div>
+  <p class="hint"><span style="color:var(--red)">◆</span> Checkpoint: SteerCo, demo, UAT oleh UDSO, lalu termin. Uang muka 20% dibayar saat kontrak.</p>
+  <div class="detail" id="detail" aria-live="polite"></div>
+</div></section>
+
+<section class="alt" id="checkpoint"><div class="wrap">
+  <p class="kicker">Checkpoint</p>
+  <h2>Milestone dinyatakan selesai oleh UDSO, bukan oleh tim proyek</h2>
+  <p class="lead">Keenam checkpoint berjalan dengan urutan yang sama.</p>
+  <div class="steps">
+    <div class="step"><p class="cond">1</p><h3>Demo di SteerCo</h3><p>Tim mendemokan hasil dan menyerahkan laporan uji.</p></div>
+    <div class="step"><p class="cond">2</p><h3>UAT oleh UDSO</h3><p>Pengguna UDSO mencoba skenario kerja nyata dalam 5 hari kerja.</p></div>
+    <div class="step"><p class="cond">3</p><h3>Pilah temuan</h3><p>Temuan kritis menahan penerimaan; temuan minor diperbaiki di milestone berikutnya.</p></div>
+    <div class="step"><p class="cond">4</p><h3>Berita Acara</h3><p>BAST ditandatangani, termin ditagihkan, blok berikutnya dimulai.</p></div>
+  </div>
+  <p class="note"><b>UAT</b> (User Acceptance Testing): admin bengkel, Service Advisor, dan Head Office menjalankan pekerjaan sehari-hari mereka di sistem uji, lalu memutuskan apakah hasilnya diterima.</p>
+</div></section>
+
+<section id="waktu"><div class="wrap">
+  <p class="kicker">Batas waktu</p>
+  <h2>Tiga aturan yang menjaga proyek tetap selesai di minggu ke-26</h2>
+  <div class="guards" style="margin-top:26px">
+    <div class="guard"><p class="cond">W3</p><h3>Keputusan desain tidak menunggu</h3><p>Tujuh keputusan dari UDSO dijawab paling lambat minggu ke-3. Setelah itu tim memakai asumsi tertulis agar jadwal tidak tertahan.</p></div>
+    <div class="guard"><p class="cond">W9</p><h3>Work Order selesai lebih dulu</h3><p>Tiga milestone berikutnya memakai hasil M2. Karena itu M2 mendapat lima minggu dan fitur wajibnya dikerjakan paling awal.</p></div>
+    <div class="guard"><p class="cond">W26</p><h3>Tanggal akhir tetap, lingkup yang menyesuaikan</h3><p>Bila waktu mepet, fitur prediksi dan analitik lanjutan digeser ke fase perpanjangan. Fitur wajib dan UAT tidak digeser.</p></div>
+  </div>
+</div></section>
+
+<section class="alt" id="batasan"><div class="wrap">
+  <p class="kicker">Batasan</p>
+  <h2>Lingkup dikunci di minggu ke-4; permintaan baru masuk lewat change request</h2>
+  <div class="cols" style="margin-top:26px">
+    <div><h3>Termasuk</h3><ul>
+      <li>Lima modul UDCare sesuai enam milestone</li>
+      <li>Fitur yang sudah berjalan tetap dijaga dan diuji ulang</li>
+      <li>UAT, uji beban, dokumentasi, dan pelatihan</li>
+      <li>Kesiapan pakai di bengkel Malang dan Surabaya</li></ul></div>
+    <div class="r"><h3>Tidak termasuk</h3><ul>
+      <li>Penerapan di luar Malang dan Surabaya</li>
+      <li>Integrasi UD Telematics; fase ini memakai WhatsApp</li>
+      <li>Koneksi langsung ke sistem lain tanpa akses dari pemiliknya</li>
+      <li>Aplikasi mobile native dan dukungan setelah minggu ke-26</li></ul></div>
+    <div class="a"><h3>Yang dibutuhkan dari UDSO</h3><ul>
+      <li>Satu PIC berwenang di setiap SteerCo</li>
+      <li>Tujuh keputusan desain sebelum minggu ke-3</li>
+      <li>Akses WhatsApp Business API dan Midtrans produksi</li>
+      <li>Tanggapan UAT dalam 5 hari kerja</li></ul></div>
+  </div>
+  <p class="note"><b>Change request:</b> permintaan di luar lingkup dicatat, tim memberi dampak waktu dan biaya dalam 3 hari kerja, lalu SteerCo memilih: tambah biaya, tukar dengan fitur lain yang setara, atau tunda ke fase perpanjangan.</p>
+</div></section>
+
+<section class="ask"><div class="wrap">
+  <p class="eyebrow">Langkah berikutnya</p>
+  <h2>Empat keputusan yang kami minta dari manajemen</h2>
+  <ol>
+    <li><div>Setujui enam milestone dan termin berbasis Berita Acara<small>20% saat kontrak; sisanya per milestone yang lulus UAT</small></div></li>
+    <li><div>Tetapkan tanggal kickoff dan PIC UDSO<small>Bisnis, TI, serta bengkel Malang dan Surabaya</small></div></li>
+    <li><div>Jawab tujuh keputusan desain sebelum minggu ke-3</div></li>
+    <li><div>Mulai proses akses WhatsApp Business API dan Midtrans produksi<small>Dibutuhkan untuk M3 dan M4</small></div></li>
+  </ol>
+</div></section>
+
+<footer><div class="wrap">Tim UDCare · Universitas Brawijaya · Andika Dwi Setya N., Atha Azzahra K.N., Dody Syah Putra. Persentase termin dan batas waktu review adalah usulan untuk disepakati.</div></footer>
+
+<script>
+const MS=[
+ {id:"M1",a:1,b:4,name:"Fondasi",title:"Lingkup terkunci dan sistem aman untuk dikembangkan",pct:10,rp:"15",
+  d:"Daftar lingkup dan desain data yang disetujui UDSO, serta risiko produksi (pembayaran, backup, pemantauan) yang sudah ditutup.",
+  c:["UDSO menandatangani lingkup pekerjaan","Data cadangan berhasil dipulihkan di sistem uji"],
+  x:"Belum ada fitur baru yang dirilis di milestone ini.",n:"Tujuh keputusan desain dari UDSO."},
+ {id:"M2",a:5,b:9,name:"Workshop Management",title:"Bengkel mengelola pekerjaan sampai selesai",pct:15,rp:"22,5",
+  d:"Bengkel mengatur kapasitas, jadwal, teknisi, dan Work Order di dalam UDCare, lengkap dengan durasi pengerjaan.",
+  c:["Penawaran disetujui pelanggan, Work Order terbentuk otomatis","Jadwal yang penuh menolak booking baru","Pekerjaan terlambat ditandai dan diberitahukan"],
+  x:"Stok part belum berkurang otomatis; itu bagian dari M4.",n:"Data teknisi dan kapasitas bengkel uji."},
+ {id:"M3",a:10,b:13,name:"Service Advisor",title:"Advisor bekerja dari satu layar",pct:15,rp:"22,5",
+  d:"Service Advisor menangani pelanggan dari konsultasi, diagnosis, dan penawaran sampai penutupan servis dan rating pelanggan.",
+  c:["Satu kasus selesai dari konsultasi sampai penutupan di satu ruang kerja","Pelanggan menerima kabar progres","Rating pelanggan tersimpan"],
+  x:"Sebelum akses WhatsApp produksi ada, kabar ke pelanggan dikirim lewat email dan notifikasi aplikasi.",n:"Akun WhatsApp Business API."},
+ {id:"M4",a:14,b:18,name:"Spare Parts",title:"Part siap sebelum kendaraan masuk",pct:15,rp:"22,5",
+  d:"Part Sales berjalan sebagai proses: permintaan, penawaran, pesanan, reservasi, transfer antar bengkel, dan pengadaan.",
+  c:["Permintaan part sampai pembayaran dan reservasi berjalan utuh","Stok kosong memicu transfer atau pengadaan","Part yang terpakai langsung mengurangi stok"],
+  x:"Katalog resmi disiapkan sampai antarmukanya; koneksi langsung menunggu akses dari pemilik data.",n:"Akun Midtrans produksi dan sumber katalog resmi."},
+ {id:"M5",a:19,b:22,name:"Workshop Network",title:"Permintaan diarahkan ke bengkel yang paling siap",pct:10,rp:"15",
+  d:"Sistem memilih bengkel berdasarkan kapasitas, teknisi, dan ketersediaan part, bukan hanya jarak.",
+  c:["Bengkel terdekat penuh, permintaan pindah ke bengkel siap berikutnya","Head Office melihat alasan pemilihan bengkel"],
+  x:"Sambungan ke sistem bengkel yang ada disiapkan sampai antarmukanya.",n:"PIC bengkel Malang dan Surabaya untuk uji lapangan."},
+ {id:"M6",a:23,b:26,name:"Intelligence + UAT",title:"Dashboard nasional dan sistem siap dipakai",pct:15,rp:"22,5",
+  d:"Head Office membandingkan kinerja bengkel, waktu layanan, stok, dan kepuasan pelanggan. Sistem lulus UAT menyeluruh dan pengguna sudah dilatih.",
+  c:["Seluruh skenario UAT wajib lulus tanpa temuan kritis","Setiap angka prediksi menampilkan sumber datanya","Pelatihan pengguna selesai"],
+  x:"Prediksi hanya pendukung keputusan. Bila waktu mepet, fitur prediksi digeser lebih dulu.",n:"Pengguna UDSO untuk UAT akhir."}
+];
+const $=s=>document.querySelector(s);
+let start=null,cur="M2";
+try{start=localStorage.getItem("udc_start")}catch(e){}
+const fmt=d=>d.toLocaleDateString("id-ID",{day:"numeric",month:"short",year:"numeric"});
+const day=(w,off)=>{const d=new Date(start+"T00:00:00");d.setDate(d.getDate()+w*7+off);return d};
+const cum=i=>20+MS.slice(0,i+1).reduce((s,m)=>s+m.pct,0);
+
+function build(){
+ $("#months").innerHTML=MS.map((m,i)=>`<span style="flex:${m.b-m.a+1}">Bulan ${i+1}</span>`).join("");
+ $("#track").innerHTML=MS.map(m=>`<button class="seg" data-id="${m.id}" style="flex:${m.b-m.a+1}" aria-label="${m.id} ${m.name}, minggu ${m.a} sampai ${m.b}">
+  <span class="cond id">${m.id}</span><span class="nm">${m.name}</span><span class="blk">W${m.a}–W${m.b} · ${m.b-m.a+1} minggu</span><span class="cp"></span></button>`).join("");
+ let t="";for(let w=1;w<=26;w++)t+=`<span class="${MS.some(m=>m.b===w)?"c":""}">${w}</span>`;
+ $("#ticks").innerHTML=t;
+ $("#payrow").innerHTML=MS.map(m=>`<span style="flex:${m.b-m.a+1}">${m.pct}% ◆</span>`).join("");
+ document.querySelectorAll(".seg").forEach(b=>{
+  const go=()=>show(b.dataset.id);
+  b.addEventListener("mouseenter",go);b.addEventListener("focus",go);b.addEventListener("click",go);
+ });
+}
+function show(id){
+ cur=id;const i=MS.findIndex(m=>m.id===id),m=MS[i];
+ document.querySelectorAll(".seg").forEach(b=>b.classList.toggle("on",b.dataset.id===id));
+ const when=start?`${fmt(day(m.a,0))} – ${fmt(day(m.b,4))}`:`Minggu ${m.a} sampai ${m.b}`;
+ const cp=start?fmt(day(m.b,4)):`akhir minggu ke-${m.b}`;
+ $("#detail").innerHTML=`<div class="dmain">
+  <div class="dhead"><span class="cond">${m.id}</span><h3>${m.title}</h3></div>
+  <p style="color:var(--mute);font-size:14px">${when} · ${m.b-m.a+1} minggu</p>
+  <div class="four">
+   <div><h4>Deliverable</h4><p>${m.d}</p></div>
+   <div><h4>Checkpoint · ${cp}</h4><ul>${m.c.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+   <div><h4>Batasan</h4><p>${m.x}</p></div>
+   <div><h4>Dibutuhkan dari UDSO</h4><p>${m.n}</p></div>
+  </div></div>
+  <div class="dside"><p class="lab">Termin setelah lulus</p><p class="cond big">${m.pct}%</p><p>Rp ${m.rp} juta dari Rp 150 juta</p>
+  <div style="margin-top:auto"><p class="lab" style="margin-bottom:8px">Waktu terpakai · ${m.b} dari 26 minggu</p><div class="meter"><i style="width:${m.b/26*100}%"></i></div>
+  <p class="lab" style="margin:16px 0 8px">Termin kumulatif · ${cum(i)}%</p><div class="meter"><i style="width:${cum(i)}%"></i></div></div></div>`;
+}
+function dates(){$("#endnote").textContent=start?`Penerimaan akhir: ${fmt(day(26,4))}`:"Isi tanggal kickoff untuk melihat tanggal setiap checkpoint."}
+const sd=$("#start");if(start)sd.value=start;
+sd.addEventListener("change",()=>{start=sd.value||null;try{start?localStorage.setItem("udc_start",start):localStorage.removeItem("udc_start")}catch(e){}dates();show(cur)});
+build();dates();show(cur);
+</script>
+</body>
+</html>
