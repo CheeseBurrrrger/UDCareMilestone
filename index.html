@@ -58,6 +58,7 @@ h2{font-size:clamp(22px,2.6vw,28px);line-height:1.25;letter-spacing:-.01em}
 .phase.pilot .tag,.phase.pilot .weeks{color:var(--red)}
 .future{margin-top:14px;padding:16px 18px;border-left:3px solid var(--blue);background:#fff;border-radius:0 10px 10px 0;color:var(--ink2);font-size:14px}
 .future b{color:var(--ink)}
+.future .open{display:block;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
 @media (max-width:760px){.roadmap{grid-template-columns:1fr;gap:8px}.phase{padding:13px 16px;display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:12px}.phase .tag{grid-column:1/-1}.phase h3{margin:3px 0 0;font-size:17px}.phase>p:nth-of-type(2){display:none}.phase .weeks{margin-top:0;padding-top:0;border-top:0;font-size:26px}.future{margin-top:10px}}
 
 /* gantt */
@@ -186,7 +187,7 @@ footer img{height:84px;width:auto}
 
 <section id="roadmap">
   <h2>Tiga fase dalam 26 minggu</h2>
-  <p class="sub">Fase pertama paling panjang karena sisa fitur dikerjakan di situ. Dua fase berikutnya lebih banyak mengurus orang daripada kode.</p>
+  <p class="sub">Fase pertama difokuskan pada penyelesaian dan integrasi fitur utama. Selanjutnya, pengujian, pelatihan pengguna, dan implementasi percontohan dilakukan untuk memastikan kesiapan sistem sebelum diserahterimakan kepada UDSO.</p>
   <div class="roadmap">
     <article class="phase">
       <p class="tag">Fase 1 · Minggu 1–18</p>
@@ -196,19 +197,20 @@ footer img{height:84px;width:auto}
     </article>
     <article class="phase testing">
       <p class="tag">Fase 2 · Minggu 19–22</p>
-      <h3>Uji coba & pelatihan</h3>
+      <h3>Pengujian dan pelatihan</h3>
       <p>Pengguna UDSO mencoba seluruh alur dengan pekerjaan mereka sendiri, dan semua peran ikut pelatihan lengkap. Pelatihan per peran sebenarnya sudah mulai di Bulan 2, seminggu setelah modulnya jadi.</p>
       <p class="weeks">4 <small>minggu</small></p>
     </article>
     <article class="phase pilot">
       <p class="tag">Fase 3 · Minggu 23–26</p>
-      <h3>Pilot di cabang</h3>
-      <p>Cabang pilot memakai UDCare untuk servis sungguhan sementara kami mendampingi di lokasi. Di minggu ke-26 sistemnya kami serahkan ke UDSO.</p>
+      <h3>Implementasi percontohan</h3>
+      <p>Cabang pilot memakai UDCare untuk operasional servis aktual sementara kami mendampingi di lokasi. Di minggu ke-26 sistemnya kami serahkan ke UDSO.</p>
       <p class="weeks">4 <small>minggu</small></p>
     </article>
   </div>
-  <div class="future"><b>Sesudah enam bulan, Rollout nasional</b><br>
-    UDSO memiliki 14 cabang. Hasil pilot di Romokalisari, Waru, dan Malang menjadi dasar UDCare rollout nasional ke 11 cabang sisanya.</div>
+  <div class="future"><b>11 cabang lainnya</b><br>
+    UDSO memiliki 14 cabang. Hasil pilot di Romokalisari, Waru, dan Malang menjadi dasar keputusan kapan UDCare masuk ke 11 cabang sisanya.
+    <span class="open"><b>Rollout nasional di dalam enam bulan ini terbuka untuk dibahas.</b> Kalau UDSO ingin ke-14 cabang sudah memakai UDCare sebelum minggu ke-26, kami terbuka membahasnya, misalnya dengan memajukan pilot dan menambah gelombang rollout di Bulan 6. Jadwal, jumlah orang di tim, dan biayanya kami hitung ulang bersama, karena mendampingi 14 cabang tentu berbeda dengan tiga.</span></div>
 </section>
 
 <section id="jadwal">
@@ -243,7 +245,7 @@ footer img{height:84px;width:auto}
   <div class="steps">
     <div class="step"><p class="cond">1</p><p>Kami tunjukkan hasilnya di rapat manajemen.</p></div>
     <div class="step"><p class="cond">2</p><p>Pengguna UDSO mencobanya sendiri selama lima hari kerja, memakai pekerjaan sehari-hari mereka.</p></div>
-    <div class="step"><p class="cond">3</p><p>Masalah berat harus beres dulu. Masalah kecil kami catat dan bereskan di tahap berikutnya.</p></div>
+    <div class="step"><p class="cond">3</p><p>Masalah kritis harus beres dulu. Masalah kecil kami catat dan bereskan di tahap berikutnya.</p></div>
     <div class="step"><p class="cond">4</p><p>Berita Acara ditandatangani, baru termin ditagihkan.</p></div>
   </div>
 </section>
@@ -252,7 +254,7 @@ footer img{height:84px;width:auto}
   <h2>Batas pekerjaan</h2>
   <div class="limits">
     <div><b>Daftar pekerjaan</b><span>Dikunci di minggu ke-3, setelah disepakati bersama UDSO.</span></div>
-    <div><b>Lokasi</b><span>Cabang Romokalisari, Waru, dan Malang. Bila pilot dimulai dari dua cabang, Waru dan Malang lebih dulu.</span></div>
+    <div><b>Lokasi</b><span>Cabang Romokalisari, Waru, dan Malang. Bila pilot dimulai dari dua cabang, Waru dan Malang lebih dulu. Rollout ke seluruh 14 cabang di dalam enam bulan ini juga bisa dibahas.</span></div>
     <div><b>Waktu</b><span>26 minggu. Kalau ada tahap yang molor, fitur pelengkap yang digeser lebih dulu, supaya pengujian, pelatihan, dan implementasi percontohan tetap berjalan sesuai jadwal.</span></div>
     <div><b>Permintaan tambahan</b><span>Kami hitung dulu tambahan waktu dan biayanya, lalu manajemen yang memutuskan lanjut atau ditunda.</span></div>
   </div>
@@ -284,17 +286,17 @@ const MS=[
   c:["Suku cadang yang terpakai langsung mengurangi stok.","Stok kosong memunculkan pilihan: kirim dari bengkel lain, atau pesan baru.","Stok yang menipis memberi peringatan."],
   x:"Katalog dan harga resmi diisi manual sampai UDSO membuka akses ke sumber datanya."},
  {id:"M5",a:15,b:18,name:"Jaringan & kantor pusat",pct:10,rp:"15",
-  d:"Permintaan servis diarahkan ke bengkel yang paling siap, dilihat dari antrean, teknisi, dan stoknya. Kantor pusat punya satu layar untuk membandingkan kinerja bengkel.",
+  d:"Permintaan servis diarahkan ke bengkel yang paling siap, dilihat dari antrean, teknisi, dan stoknya. Kantor pusat dapat memantau dan membandingkan kinerja setiap bengkel melalui satu dashboard terpusat. Informasi mengenai durasi servis dan penilaian pelanggan membantu manajemen mengevaluasi performa cabang serta mengidentifikasi area yang memerlukan perbaikan.",
   c:["Bengkel terdekat sedang penuh, lalu permintaan pindah ke bengkel berikutnya yang siap.","Kantor pusat melihat lama servis dan nilai dari pelanggan untuk tiap bengkel."],
   x:"Fitur perkiraan kebutuhan servis dan suku cadang tidak masuk enam bulan ini."},
  {id:"M6",a:19,b:22,name:"Pengujian & pelatihan",pct:10,rp:"15",t:1,
   d:"Pengguna UDSO menguji alur sistem dengan skenario pekerjaan sehari-hari. Admin bengkel, Service Advisor, petugas suku cadang, dan staf kantor pusat mengikuti pelatihan sesuai perannya, masing-masing dilengkapi panduan tertulis.",
-  c:["Semua alur utama lolos uji coba tanpa masalah berat.","Setiap peran sudah ikut pelatihan."],
+  c:["Semua alur utama lolos uji coba tanpa Masalah kritis.","Setiap peran sudah ikut pelatihan."],
   x:"Masalah kecil yang ditemukan pada tahap ini dicatat untuk ditangani selama implementasi percontohan."},
- {id:"M7",a:23,b:26,name:"Test keamanan dan Handover",pct:10,rp:"15",t:1,
-  d:"UDCare digunakan dalam kegiatan servis nyata di cabang Romokalisari, Waru, dan Malang selama minimal dua minggu. Tim memberikan pendampingan di lokasi, menangani masalah yang muncul, lalu menyerahkan sistem, dokumentasi, dan akses kepada UDSO.",
-  c:["Setiap cabang pilot menggunakan UDCare untuk kegiatan servis nyata selama minimal dua minggu.","Dokumentasi dan akses sistem telah diserahkan kepada UDSO."],
-  x:"Perluasan ke 11 cabang lainnya dan pendampingan setelah minggu ke-26 dibahas sebagai tahap lanjutan."}
+ {id:"M7",a:23,b:26,name:"Pengujian Keamanan dan Handover",pct:10,rp:"15",t:1,
+  d:"Sebelum dan selama implementasi percontohan, tim melakukan pengujian keamanan untuk memastikan akses pengguna, pengelolaan data, dan fungsi sistem berjalan sesuai hak akses masing-masing peran. UDCare juga digunakan dalam kegiatan servis nyata di cabang Romokalisari, Waru, dan Malang selama minimal dua minggu. Tim memberikan pendampingan di lokasi, menangani masalah yang muncul, lalu menyerahkan sistem, dokumentasi, dan akses kepada UDSO.",
+  c:["Pengujian keamanan terhadap mekanisme autentikasi dan hak akses pengguna telah dilakukan, dan temuan kritis telah ditangani.","Setiap cabang pilot menggunakan UDCare untuk kegiatan servis nyata selama minimal dua minggu.","Dokumentasi dan akses sistem telah diserahkan kepada UDSO.","1. Laporan hasil pilot, termasuk lama servis, masalah yang muncul, dan kesiapan setiap cabang, diserahkan kepada UDSO sebagai bahan keputusan rollout ke cabang lain."],
+  x:"Tiga cabang adalah cakupan pilot awal. Kalau UDSO ingin rollout nasional selesai sebelum minggu ke-26, tahap ini bisa kami perluas; jadwal, tim, dan biayanya kami hitung ulang bersama."}
 ];
 const TRAIN=[[8,"admin bengkel"],[11,"Service Advisor"],[15,"petugas suku cadang"]];
 const W=26,$=s=>document.querySelector(s),pc=n=>(n/W*100)+"%";
